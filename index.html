@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ask - I/O Extended 2018 Kuala Lumpur</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="description" content="Google I/O Extended 2018 Kuala Lumpur brings together developers from around the globe for an immersive experience focused on exploring the next generation of tech.">
+    <meta itemprop="name" content="Google I/O Extended 2018 Kuala Lumpur">
+    <meta itemprop="description" content="Google I/O Extended 2018 Kuala Lumpur brings together developers from around the globe for an immersive experience focused on exploring the next generation of tech.">
+    <meta itemprop="url" content="https://ask.gdgkl.org">
+    <meta itemprop="location" content="Sunway University, Bandar Sunway">
+    <meta itemprop="startDate" content="2018-07-15">
+    <meta itemprop="endDate" content="2018-07-15">
+    <meta property="og:url" content="https://ask.gdgkl.org">
+    <meta property="og:type" content="Event">
+    <meta property="og:image" content="https://res.cloudinary.com/limhenry/image/upload/v1531275685/ioxkl18_pwa/io_ask.jpg">
+    <meta property="og:title" content="Ask - Google I/O Extended 2018 Kuala Lumpur">
+    <meta property="og:site_name" content="Ask - Google I/O Extended 2018 Kuala Lumpur">
+    <meta property="og:description" content="Google I/O Extended 2018 Kuala Lumpur brings together developers from around the globe for an immersive experience focused on exploring the next generation of tech.">
+    <script type="application/ld+json">{
+        "@context": "http://schema.org",
+        "@type": "Event",
+        "name": "Google I/O Extended 2018 Kuala Lumpur",
+        "description": "Google I/O Extended 2018 Kuala Lumpur brings together developers from around the globe for an immersive experience focused on exploring the next generation of tech.",
+        "startDate": "2018-07-15",
+        "endDate": "2018-07-15",
+        "url": "https://ask.gdgkl.org",
+        "image": "https://res.cloudinary.com/limhenry/image/upload/v1531275685/ioxkl18_pwa/io_ask.jpg",
+        "location": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bandar Sunway",
+            "addressRegion": "Selangor",
+            "postalCode": "47500",
+            "streetAddress": "5, Jalan Universiti"
+          },
+          "name": "Sunway University"
+        }
+      }</script>
+    <link rel="shortcut icon" href="https://res.cloudinary.com/limhenry/image/upload/v1528856065/ioxkl18_pwa/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            min-height: 100vh;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        header {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            height: 64px;
+        }
+
+        header .io_logo {
+            width: 48px;
+        }
+
+        header span {
+            margin-left: 12px;
+            font-size: 26px;
+            font-weight: 400;
+            color: #5179ee;
+        }
+
+        content {
+            width: 100%;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            max-width: 800px;
+            margin: 24px auto;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 0 8px;
+        }
+
+        content .tips {
+            color: #989898;
+            margin-bottom: 16px;
+            font-weight: 400;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        content .tips .break {
+            display: none;
+        }
+
+        content .item {
+            width: 100%;
+        }
+
+        content .card {
+            margin: 8px 0;
+            width: 100%;
+            max-width: 800px;
+            padding: 28px 24px;
+            border-radius: 4px;
+            -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            transition: 150ms box-shadow ease;
+        }
+
+        content .card:hover {
+            -webkit-box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+        }
+
+        content .card .status {
+            font-size: 15px;
+            font-weight: 400;
+            color: #757575;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        content .card .status b {
+            font-weight: 500;
+            color: #5179ee;
+            margin-right: 4px;
+        }
+
+        content .card h3 {
+            margin: 16px 0 8px 0;
+            font-weight: 400;
+            color: #4a4a4a;
+            font-size: 21px;
+            line-height: 28px;
+        }
+
+        content .card p {
+            margin: 4px 0 12px 0;
+            font-size: 14px;
+            color: #3c3c3c;
+        }
+
+        .placeholder {
+            border-radius: 2px; 
+            background: #f1f1f1;
+        }
+
+        content .card .status.placeholder {
+            height: 18px;
+            width: 35%;
+        }
+
+        content .card h3.placeholder {
+            height: 26px;
+            width: 90%;
+        }
+
+        content .card h3.placeholder:nth-of-type(2) {
+            display: none;
+        }
+
+        content .card p.placeholder {
+            height: 16px;
+            width: 50%;
+        }
+
+        content .full_btn {
+            cursor: pointer;
+            color: #5179ee;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin: 26px 0;
+            border: 2px solid #5179ee;
+            padding: 10px 14px;
+            border-radius: 4px;
+            font-size: 15px;
+            text-decoration: none;
+            transition: 150ms background-color ease;
+        }
+
+        content .full_btn:hover {
+            background: #f9f8fe;
+        }
+
+        content .full_btn:focus {
+            background: #eef2ff;
+        }
+
+        footer {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 16px;
+        }
+
+        footer img {
+            height: 20px;
+        }
+
+        @media screen and (max-width: 860px) {
+            content {
+                margin-top: 12px;
+            }
+            content .card {
+                margin: 6px 0;
+                padding: 22px 16px;
+            }
+            content .card .status {
+                font-size: 14px;
+            }
+            content .card h3 {
+                margin-top: 12px;
+                font-size: 18px;
+                line-height: 22px;
+            }
+            content .card .status.placeholder {
+                width: 50%;
+            }
+            content .card h3.placeholder {
+                width: 98%;
+                height: 22px;
+                margin-bottom: 5px;
+            }
+            content .card h3.placeholder:nth-of-type(2) {
+                display: block;
+                margin-top: 0;
+                margin-bottom: 10px;
+                width: 85%;
+            }
+            content .card p.placeholder {
+                height: 15px;
+                width: 75%;
+            }
+            content .card p {
+                font-size: 13px;
+                margin-bottom: 4px;
+            }
+            content .tips {
+                margin: 0 16px 16px 16px;
+            }
+            content .tips .break {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <svg class="io_logo" viewBox="0 0 46 33" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd" transform="translate(-62 -17)">
+                <g transform="translate(62 17)" fill="#536DFE">
+                    <g>
+                        <polygon points="0 27.6131665 11.6101901 27.6131665 11.6101901 4.41459344 0 4.41459344"></polygon>
+                        <polygon points="20.1618317 2.15798668e-05 12.9722085 32.3443582 14.7781521 32.7494123 21.9677754 0.405075688"></polygon>
+                        <path d="M33.2533553,3.45297298 C26.3665842,3.45297298 20.7835806,9.06222787 20.7835806,15.9813807 C20.7835806,22.9009651 26.3665842,28.5100042 33.2533553,28.5100042 C40.140556,28.5100042 45.7233447,22.9009651 45.7233447,15.9813807 C45.7233447,9.06222787 40.140556,3.45297298 33.2533553,3.45297298"></path>
+                    </g>
+                </g>
+            </g>
+        </svg>
+        <span>Ask</span>
+    </header>
+    <content>
+        <div class="tips">Have questions to ask the speaker?
+            <div class="break"></div>Click on the session and start asking!
+        </div>
+        <div class="item">
+            <div class="card">
+                <div class="status placeholder"></div>
+                <h3 class="placeholder"></h3>
+                <h3 class="placeholder"></h3>
+                <p class="placeholder"></p>
+            </div>
+            <div class="card">
+                <div class="status placeholder"></div>
+                <h3 class="placeholder"></h3>
+                <h3 class="placeholder"></h3>
+                <p class="placeholder"></p>
+            </div>
+            <div class="card">
+                <div class="status placeholder"></div>
+                <h3 class="placeholder"></h3>
+                <h3 class="placeholder"></h3>
+                <p class="placeholder"></p>
+            </div>
+        </div>
+        <a class="full_btn" href="https://events.gdgkl.org/io/schedule">View Full Schedule</a>
+    </content>
+    <footer>
+        <img crossorigin="anonymous" alt="GDG Kuala Lumpur Logo" src="https://res.cloudinary.com/limhenry/image/upload/v1528864707/ioxkl18_pwa/sponsors/gdgkl.svg">
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase-database.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyD_B8LAxG-1IlfrlZwN5HAbncuwHrCZxU8",
+            authDomain: "gdg-kl.firebaseapp.com",
+            databaseURL: "https://gdg-kl.firebaseio.com",
+            projectId: "gdg-kl",
+            storageBucket: "gdg-kl.appspot.com",
+            messagingSenderId: "824291119922"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script>
+        var db = firebase.database();
+        var db_path = 'events_site/ioxkl18/';
+        var timestamp = Date.now();
+        var scheduleRef = db.ref(db_path + 'ask_schedule').orderByChild('endTimestamp').startAt(timestamp).limitToFirst(1);
+        scheduleRef.once('value').then(function (snapshot) {
+            var scheduleData = snapshot.val();
+            var item_container = document.querySelector('.item');
+            item_container.innerHTML = "";
+            for (var item in scheduleData) {
+                scheduleData[item].sessions.forEach(function (session) {
+                    var card = document.createElement('div');
+                    card.className = "card";
+                    var status = document.createElement('div');
+                    status.className = "status";
+                    if (timestamp >= scheduleData[item].startTimestamp) {
+                        status.innerHTML = "<b>" + session.location + "</b>- Happening right now:";
+                    }
+                    else {
+                        status.innerHTML = "<b>" + session.location + "</b>- Coming Up Next:";
+                    }
+                    var sessionTitle = document.createElement('h3');
+                    sessionTitle.innerHTML = session.title;
+                    var sessionDesc = document.createElement('p');
+                    sessionDesc.innerHTML = session.speaker;
+                    card.appendChild(status);
+                    card.appendChild(sessionTitle);
+                    card.appendChild(sessionDesc);
+                    item_container.appendChild(card);
+                })
+            };
+        });
+    </script>
+</body>
+
+</html>
