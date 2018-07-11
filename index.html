@@ -46,6 +46,9 @@
         * {
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
             user-select: none;
         }
 
@@ -131,7 +134,11 @@
             -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.15);
             box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.15);
             cursor: pointer;
+            -webkit-transition: 150ms -webkit-box-shadow ease;
+            transition: 150ms -webkit-box-shadow ease;
+            -o-transition: 150ms box-shadow ease;
             transition: 150ms box-shadow ease;
+            transition: 150ms box-shadow ease, 150ms -webkit-box-shadow ease;
         }
 
         content .card:hover {
@@ -172,7 +179,7 @@
         }
 
         .placeholder {
-            border-radius: 2px; 
+            border-radius: 2px;
             background: #f1f1f1;
         }
 
@@ -206,6 +213,8 @@
             border-radius: 4px;
             font-size: 15px;
             text-decoration: none;
+            -webkit-transition: 150ms background-color ease;
+            -o-transition: 150ms background-color ease;
             transition: 150ms background-color ease;
         }
 
