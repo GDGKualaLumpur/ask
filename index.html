@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ask - I/O Extended 2018 Kuala Lumpur</title>
+    <title>Ask - Google I/O Extended 2018 Kuala Lumpur</title>
     <link rel="manifest" href="manifest.json">
     <meta name="description" content="Google I/O Extended 2018 Kuala Lumpur brings together developers from around the globe for an immersive experience focused on exploring the next generation of tech.">
     <meta itemprop="name" content="Google I/O Extended 2018 Kuala Lumpur">
@@ -20,26 +20,26 @@
     <meta property="og:site_name" content="Ask - Google I/O Extended 2018 Kuala Lumpur">
     <meta property="og:description" content="Google I/O Extended 2018 Kuala Lumpur brings together developers from around the globe for an immersive experience focused on exploring the next generation of tech.">
     <script type="application/ld+json">{
-        "@context": "http://schema.org",
-        "@type": "Event",
-        "name": "Google I/O Extended 2018 Kuala Lumpur",
-        "description": "Google I/O Extended 2018 Kuala Lumpur brings together developers from around the globe for an immersive experience focused on exploring the next generation of tech.",
-        "startDate": "2018-07-15",
-        "endDate": "2018-07-15",
-        "url": "https://ask.gdgkl.org",
-        "image": "https://res.cloudinary.com/limhenry/image/upload/v1531275685/ioxkl18_pwa/io_ask.jpg",
-        "location": {
-          "@type": "Place",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bandar Sunway",
-            "addressRegion": "Selangor",
-            "postalCode": "47500",
-            "streetAddress": "5, Jalan Universiti"
-          },
-          "name": "Sunway University"
-        }
-      }</script>
+"@context": "http://schema.org",
+"@type": "Event",
+"name": "Google I/O Extended 2018 Kuala Lumpur",
+"description": "Google I/O Extended 2018 Kuala Lumpur brings together developers from around the globe for an immersive experience focused on exploring the next generation of tech.",
+"startDate": "2018-07-15",
+"endDate": "2018-07-15",
+"url": "https://ask.gdgkl.org",
+"image": "https://res.cloudinary.com/limhenry/image/upload/v1531275685/ioxkl18_pwa/io_ask.jpg",
+"location": {
+"@type": "Place",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Bandar Sunway",
+"addressRegion": "Selangor",
+"postalCode": "47500",
+"streetAddress": "5, Jalan Universiti"
+},
+"name": "Sunway University"
+}
+}</script>
     <link rel="shortcut icon" href="https://res.cloudinary.com/limhenry/image/upload/v1528856065/ioxkl18_pwa/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -178,28 +178,97 @@
             color: #3c3c3c;
         }
 
-        .placeholder {
-            border-radius: 2px;
-            background: #f1f1f1;
+        content .card.placeholder {
+            padding: 0;
+            background: white;
+            overflow: auto;
+            position: relative;
         }
 
-        content .card .status.placeholder {
+        content .card.placeholder .placeholder-mask {
+            height: 96px;
+            -webkit-animation: 8s placeholder linear infinite forwards;
+            animation: 8s placeholder linear infinite forwards;
+            margin: 28px 24px;
+            position: relative;
+            background: -webkit-gradient(linear, left top, right top, color-stop(8%, #eeeeee), color-stop(18%, #dddddd), color-stop(33%, #eeeeee));
+            background: -webkit-linear-gradient(left, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+            background: -o-linear-gradient(left, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+            background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+        }
+
+        @-webkit-keyframes placeholder {
+            0% {
+                background-position: -1200px 0;
+            }
+            100% {
+                background-position: 1200px 0;
+            }
+        }
+
+        @keyframes placeholder {
+            0% {
+                background-position: -1200px 0;
+            }
+            100% {
+                background-position: 1200px 0;
+            }
+        }
+
+        .mask {
+            background: white;
+        }
+
+        .mask.status-top {
+            position: absolute;
             height: 18px;
-            width: 35%;
+            width: 65%;
+            top: 0;
+            right: 0;
         }
 
-        content .card h3.placeholder {
+        .mask.status-bottom {
+            position: absolute;
+            height: 16px;
+            width: 100%;
+            top: 18px;
+            right: 0;
+        }
+
+        .mask.title-top {
+            position: absolute;
             height: 26px;
-            width: 90%;
+            width: 10%;
+            top: 34px;
+            right: 0;
         }
 
-        content .card h3.placeholder:nth-of-type(2) {
-            display: none;
+        .mask.title-bottom {
+            position: absolute;
+            height: 8px;
+            width: 100%;
+            top: 60px;
+            right: 0;
         }
 
-        content .card p.placeholder {
+        .mask.subtitle-top {
+            position: absolute;
             height: 16px;
             width: 50%;
+            top: 68px;
+            right: 0;
+        }
+
+        .mask.subtitle-bottom {
+            position: absolute;
+            height: 16px;
+            width: 100%;
+            top: 84px;
+            right: 0;
+        }
+
+        .mask.mobile {
+            display: none;
         }
 
         content .full_btn {
@@ -259,23 +328,44 @@
                 font-size: 18px;
                 line-height: 22px;
             }
-            content .card .status.placeholder {
+            content .card.placeholder .placeholder-mask {
+                height: 108px;
+                margin: 22px 16px;
+            }
+            .mask.status-top {
                 width: 50%;
             }
-            content .card h3.placeholder {
-                width: 98%;
+            .mask.status-bottom {
+                height: 12px;
+            }
+            .mask.title-top {
                 height: 22px;
-                margin-bottom: 5px;
+                top: 30px;
+                width: 2%;
             }
-            content .card h3.placeholder:nth-of-type(2) {
+            .mask.title-bottom {
+                height: 5px;
+                top: 52px
+            }
+            .mask.mobile {
                 display: block;
-                margin-top: 0;
-                margin-bottom: 10px;
-                width: 85%;
             }
-            content .card p.placeholder {
+            .mask.mobile.title-top {
+                height: 22px;
+                top: 57px;
+                width: 15%;
+            }
+            .mask.mobile.title-bottom {
+                height: 10px;
+                top: 79px;
+            }
+            .mask.subtitle-top {
+                width: 25%;
                 height: 15px;
-                width: 75%;
+                top: 89px;
+            }
+            .mask.subtitle-bottom {
+                top: 104px;
             }
             content .card p {
                 font-size: 13px;
@@ -311,23 +401,41 @@
             <div class="break"></div>Click on the session and start asking!
         </div>
         <div class="item">
-            <div class="card">
-                <div class="status placeholder"></div>
-                <h3 class="placeholder"></h3>
-                <h3 class="placeholder"></h3>
-                <p class="placeholder"></p>
+            <div class="card placeholder">
+                <div class="placeholder-mask">
+                    <div class="mask status-top"></div>
+                    <div class="mask status-bottom"></div>
+                    <div class="mask title-top"></div>
+                    <div class="mask title-bottom"></div>
+                    <div class="mask mobile title-top"></div>
+                    <div class="mask mobile title-bottom"></div>
+                    <div class="mask subtitle-top"></div>
+                    <div class="mask subtitle-bottom"></div>
+                </div>
             </div>
-            <div class="card">
-                <div class="status placeholder"></div>
-                <h3 class="placeholder"></h3>
-                <h3 class="placeholder"></h3>
-                <p class="placeholder"></p>
+            <div class="card placeholder">
+                <div class="placeholder-mask">
+                    <div class="mask status-top"></div>
+                    <div class="mask status-bottom"></div>
+                    <div class="mask title-top"></div>
+                    <div class="mask title-bottom"></div>
+                    <div class="mask mobile title-top"></div>
+                    <div class="mask mobile title-bottom"></div>
+                    <div class="mask subtitle-top"></div>
+                    <div class="mask subtitle-bottom"></div>
+                </div>
             </div>
-            <div class="card">
-                <div class="status placeholder"></div>
-                <h3 class="placeholder"></h3>
-                <h3 class="placeholder"></h3>
-                <p class="placeholder"></p>
+            <div class="card placeholder">
+                <div class="placeholder-mask">
+                    <div class="mask status-top"></div>
+                    <div class="mask status-bottom"></div>
+                    <div class="mask title-top"></div>
+                    <div class="mask title-bottom"></div>
+                    <div class="mask mobile title-top"></div>
+                    <div class="mask mobile title-bottom"></div>
+                    <div class="mask subtitle-top"></div>
+                    <div class="mask subtitle-bottom"></div>
+                </div>
             </div>
         </div>
         <a class="full_btn" href="https://events.gdgkl.org/io/schedule">View Full Schedule</a>
